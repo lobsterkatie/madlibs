@@ -1,5 +1,4 @@
 from random import choice
-
 from flask import Flask, render_template, request
 
 
@@ -29,6 +28,13 @@ def greet_person():
 
     return render_template("compliment.html", person=player, compliment=compliment)
 
+
+@app.route('/game')
+def show_game_form():
+    if request.args.get("wants-game"):
+        return render_template("game.html")
+    else:
+        return render_template("goodbye.html")
 
 if __name__ == '__main__':
     # debug=True gives us error messages in the browser and also "reloads" our web app

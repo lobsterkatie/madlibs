@@ -1,10 +1,11 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>A Compliment</title>
-</head>
-<body>
-   <p>Hi {{ person }}! I think you're {{ compliment }}!</p>
+{% extends "base.html" %}
+
+{% block title %}
+    Howdy, {{ person }}!
+{% endblock %}
+
+{% block body %}
+   <p>Hi, {{ person }}! I think you're {{ compliment }}!</p>
    <form action="/game">
         <label>Would you like to play a game?
             <input type="checkbox" name="wants-game">
@@ -12,5 +13,4 @@
         <br> <br>
         <input type="submit">
    </form>
-</body>
-</html>
+{% endblock %}

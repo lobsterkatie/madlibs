@@ -1,5 +1,5 @@
 from random import choice
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, redirect
 
 
 # "__name__" is a special Python variable for the name of the current module
@@ -9,7 +9,7 @@ app = Flask(__name__)
 # route to handle the landing page of a website.
 @app.route('/')
 def start_here():
-    return "Hi! This is the home page."
+    return redirect("/hello")
 
 # route to display a simple web page
 @app.route('/hello')

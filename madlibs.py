@@ -32,7 +32,9 @@ def greet_person():
 @app.route('/game')
 def show_game_form():
     if request.args.get("wants-game"):
-        return render_template("game.html")
+        color_options = ["Scarlet", "Marigold", "Goldenrod", "Grass",
+                         "Cobalt", "Ultramarine", "Heliotrope"]
+        return render_template("game.html", options=color_options)
     else:
         return render_template("goodbye.html")
 

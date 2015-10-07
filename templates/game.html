@@ -15,6 +15,13 @@
         <div>
             <label> Color:
                 <select name="color">
+                    {% for option in options %}
+                        <option value={{ option.lower() }}> 
+                            {{ option }}
+                        </option> 
+                    {% endfor %}
+                </select>
+                <!-- <select name="color">
                     <option value="scarlet">Scarlet</option>
                     <option value="marigold">Marigold</option>
                     <option value="goldenrod">Goldenrod</option>
@@ -22,7 +29,7 @@
                     <option value="cobalt">Cobalt</option>
                     <option value="ultramarine">Ultramarine</option>
                     <option value="heliotrope">Heliotrope</option>
-                </select>
+                </select> -->
             </label>
         </div>
         <br>

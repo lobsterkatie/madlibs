@@ -2,4 +2,27 @@
 {% block title%}Madlibs{% endblock %}
 {% block body %}
 
+    <div>
+        There once was 
+        
+        {% if color == "ultramarine" %}
+            an
+        {% else %}
+            a
+        {% endif %}
+
+        {{ color }} {{ noun }} sitting in the Hackbright Lab. When {{ person }} went to pick it up, it burst into flames in a totally 
+
+        {% if adjectives|length == 1 %}
+            {{ adjectives[0] }}
+        {% else %}
+            {% for adj in adjectives[:-1] %}
+                {{ adj }},
+            {% endfor %}
+
+            {{ adjectives[-1] }}
+        {% endif %}
+
+        way.
+    </div>
 {% endblock%}

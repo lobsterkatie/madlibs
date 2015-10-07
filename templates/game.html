@@ -1,0 +1,48 @@
+{% extends "base.html"%}
+{% block title%}Game{% endblock %}
+{% block body %}
+    <form action="/madlib">
+        <div>
+            <label> Person:
+                <input type="radio" name="person" value="curie">Marie Curie
+                <input type="radio" name="person" value="lovelace">Ada Lovelace
+                <input type="radio" name="person" value="hopper">Grace Hopper
+                <input type="radio" name="person" value="ride">Sally Ride
+                <input type="radio" name="person" value="franklin">Rosalind Franklin
+            </label>
+        </div>
+        </br>
+        <div>
+            <label> Color:
+                <select name="color">
+                    <option value="scarlet">Scarlet</option>
+                    <option value="marigold">Marigold</option>
+                    <option value="goldenrod">Goldenrod</option>
+                    <option value="grass">Grass</option>
+                    <option value="cobalt">Cobalt</option>
+                    <option value="ultramarine">Ultramarine</option>
+                    <option value="heliotrope">Heliotrope</option>
+                </select>
+            </label>
+        </div>
+        <br>
+        <div>
+            <label> Noun:
+                <input type="text" name="noun" placeholder="ex: goat">
+            </label>
+        </div>
+        <br>
+        <div>
+            <label> Adjective:
+                <input type="checkbox" name="adjective" value="spiky">Spiky
+                <input type="checkbox" name="adjective" value="cromulent">Cromulent
+                <input type="checkbox" name="adjective" value="oafish">Oafish
+                <input type="checkbox" name="adjective" value="flammable">Flammable
+                <input type="checkbox" name="adjective" value="psychedelic">Psychedelic
+                <input type="checkbox" name="adjective" value="axiomatic">Axiomatic
+                <input type="checkbox" name="adjective" value="sly">Sly
+
+            </label>
+        </div>
+    </form>
+{% endblock%}
